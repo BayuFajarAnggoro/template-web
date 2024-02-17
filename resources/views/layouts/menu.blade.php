@@ -14,6 +14,7 @@
         @if ($jumlahmenu > 20)
             <li class="{{ request()->is("home") ? "active" : "" }}">
                 <a href="{{ route("home") }}"><i class="feather-home"></i> <span>Dashboard</span></a>
+                <div class="out-circle"></div>
             </li>
             @foreach ($arr as $key => $val)
                 @php
@@ -47,6 +48,7 @@
 
                                 <li>
                                     <a {!! $active !!} href="{{ url($url) }}">{{ $v->NamaFitur }}</a>
+                                    <div class="out-circle"></div>
                                 </li>
                             @endforeach
                         </ul>
@@ -61,6 +63,7 @@
                         <li {!! $active !!}>
                             <a href="{{ url($url) }}"><i class="{{ $v->Icon }}"></i>
                                 <span>{{ $v->NamaFitur }}</span></a>
+                                <div class="out-circle"></div>
                         </li>
                     @endforeach
                 @endif
@@ -71,6 +74,7 @@
             </li>
             <li class="{{ request()->is("home") ? "active" : "" }}">
                 <a href="{{ route("home") }}"><i class="feather-home"></i> <span>Dashboard</span></a>
+                <div class="out-circle"></div>
             </li>
             @foreach ($arr as $key => $val)
                 @php
@@ -79,6 +83,7 @@
                 @if ($jumlahsub > 1)
                     <li class="menu-title">
                         <span>{{ strtoupper($key) }}</span>
+                        <div class="out-circle"></div>
                     </li>
                 @endif
                 @foreach ($val as $k => $v)
@@ -90,6 +95,7 @@
                     <li {!! $active !!}>
                         <a href="{{ url($url) }}"><i class="{{ $v->Icon }}"></i>
                             <span>{{ $v->NamaFitur }}</span></a>
+                            <div class="out-circle"></div>
                     </li>
                 @endforeach
             @endforeach

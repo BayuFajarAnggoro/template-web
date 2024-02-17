@@ -25,6 +25,7 @@
                 <div class="page-header">
                     <div class="row">
                         <div class="col-sm-12">
+                            
                             <div class="page-sub-header">
                                 <h3 class="page-title"><?= @$title ?></h3>
                                 <!-- <ul class="breadcrumb">

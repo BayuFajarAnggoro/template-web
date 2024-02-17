@@ -102,18 +102,76 @@
         border-color: #3d5ee1;
         border-radius: inherit;
     } */
+    /* .sidebar-menu>ul>li{
+        width: calc(100%-30px);
+    } */
     .sidebar-menu li.active>a {
-        background-color: #fff;
+        /* background-color: #fff; */
+        background-color: #f7f7fa;
         color: #3d5ee1;
         position: relative;
         margin: 0 -15px;
         padding-left: 30px;
     }
 
+    .sidebar-menu li.active>a::after {
+        width: 20px;
+        content: "";
+        height:200%;
+
+        /* vertical-align: middle; */
+        position: absolute;
+        right: 0;
+        top: -50%;
+        background: #f7f7fa;
+        /* background: #3d5ee1; */
+        -webkit-transition: all .25s;
+        -ms-transition: all .25s;
+        transition: all .25s;
+        border-radius: 0 0px 0px ; 
+    }
+
+    .sidebar-menu li.active>a:hover {
+        /* background-color: #fff; */
+        background-color: #f7f7fa;
+        /* color: #3d5ee1;
+        position: relative;
+        margin: 0 -15px;
+        padding-left: 30px; */
+    }
+
+    .sidebar-menu li.active>div.out-circle{
+        height: 40px;
+        width: 40px;
+        top: -40px;
+        background-color: #fff;
+        border-radius: 0% 0% 50% 50%;
+        right: -15px;
+        position: absolute;
+        /* clip-path: circle(50%); */
+        /* z-index: inherit; */
+    }
+
+    .sidebar-menu li.active>div.out-circle::after{
+        content: "";
+        height: 40px;
+        width: 40px;
+        top: calc(100% + 50px);
+        background-color: #fff;
+        border-radius:  50% 50% 0% 0%;
+        right: 0px;
+        position: absolute;
+        /* z-index: inherit; */
+    }
+
+   
+
     .sidebar-menu>ul>li>a:hover {
         background-color: #fff;
         color: #3d5ee1;
         margin: 0 -15px;
         padding-left: 30px;
+        border-radius: 40px;
     }
+    
 </style>
